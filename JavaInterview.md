@@ -30,12 +30,15 @@ Because Java programs are compiled into bytecode, which can be executed on any J
 ## 2. Data Types, Variables, and Operators
 
 **6. What are the data types in Java?**  
-- **Primitive**: int, float, char, boolean, etc.  
-- **Non-primitive**: String, Array, Class, Interface
+- **Primitive**: `int`, `float`, `char`, `boolean`, etc.  
+- **Non-primitive**: `String`, `Array`, `Class`, `Interface`
 
 **7. What is type casting?**  
 Converting one data type to another.  
-Example: `int a = (int) 10.5;`
+Example:  
+```java
+int a = (int) 10.5;
+```
 
 **8. Difference between `==` and `.equals()`?**  
 - `==` compares object references  
@@ -110,8 +113,8 @@ Calling one constructor from another using `this()` or `super()`.
 An unwanted event that interrupts normal program flow.
 
 **26. Checked vs Unchecked Exceptions?**  
-- **Checked**: Compile-time (e.g., IOException)  
-- **Unchecked**: Runtime (e.g., NullPointerException)
+- **Checked**: Compile-time (e.g., `IOException`)  
+- **Unchecked**: Runtime (e.g., `NullPointerException`)
 
 **27. What is the finally block?**  
 Used to execute code after try/catch, regardless of exception outcome.
@@ -154,10 +157,10 @@ A set of classes and interfaces for storing and manipulating data.
 
 **36. Difference between ArrayList and LinkedList?**
 
-| Feature      | ArrayList       | LinkedList         |
-|--------------|------------------|---------------------|
-| Access Speed | Fast (index-based)| Slower (sequential) |
-| Insert/Delete| Slow (shift elements)| Fast (link update) |
+| Feature      | ArrayList            | LinkedList           |
+|--------------|----------------------|----------------------|
+| Access Speed | Fast (index-based)   | Slower (sequential)  |
+| Insert/Delete| Slow (shift elements)| Fast (link update)   |
 
 ---
 
@@ -170,7 +173,7 @@ A thread is a lightweight subprocess for multitasking within a program.
 - By extending `Thread` class  
 - By implementing `Runnable` interface
 
-**39. Difference between start() and run()?**  
+**39. Difference between `start()` and `run()`?**  
 - `start()`: Creates a new thread  
 - `run()`: Runs on the current thread
 
@@ -213,3 +216,36 @@ Process of automatically deleting unused objects to free memory.
 Syntax for writing anonymous functions:  
 ```java
 (param) -> expression
+```
+
+**47. What is a functional interface?**  
+Interface with only one abstract method (e.g., `Runnable`, `Comparator`).
+
+**48. What are streams in Java 8?**  
+API to process collections in a functional style.
+
+**49. What is Optional class?**  
+A container object used to avoid `NullPointerException`.
+
+---
+
+## 12. Advanced Java Concepts
+
+**50. Difference between HashMap and Hashtable?**  
+- **HashMap**: Not synchronized, allows one null key  
+- **Hashtable**: Synchronized, no null key/value
+
+**51. What is ConcurrentHashMap?**  
+Thread-safe version of HashMap with better performance.
+
+**52. What is serialization?**  
+Converting object to byte stream for storage or transmission.
+
+**53. What is transient keyword?**  
+Used to skip variable during serialization.
+
+**54. What is reflection?**  
+API to examine or modify runtime behavior of classes and objects.
+
+**55. What is the use of volatile keyword?**  
+Ensures visibility of changes to variables across threads.
